@@ -4,24 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class NinjaControl : MonoBehaviour
+public class PlayerControl : MonoBehaviour
 {
+    CharacterInfo life;
+    MainSys mainSys;
 
-    //이것좀 옮겨주세요 
-    //restartBtn.gameObject.SetActive(true);//
-    //restartBtn.gameObject.SetActive(false);//
-    //public Button restartBtn;//임시 재시작 버튼//
-
-    //public void BtnClick()
-    //{
-    //    Debug.Log("Button Click");
-    //    Time.timeScale = 1;
-    //    SceneManager.LoadScene(0);
-    //}
 
     //시스템 보조용
-    public GameObject targetPosition;// 위치 자동정렬용 좌표받는 게임 오브젝트
-
+    public int StartPosition;
 
     //점프를 위한 
     private bool IsJumping;   //점프 가능상태 
@@ -52,12 +42,7 @@ public class NinjaControl : MonoBehaviour
 
 
     //생명력을 위한
-    public float Life;
-    public bool Death;
     public bool Damaging;
-
-
-
 
     //사운드를 위한
 
@@ -67,13 +52,18 @@ public class NinjaControl : MonoBehaviour
     public AudioClip dodgeSound;
 
 
+    void Awake()
+    {
 
+        life = GameObject.Find("CharacterInfo").GetComponent<CharacterInfo>();
+        mainSys = GameObject.Find("GameSystem").GetComponent<MainSys>();
+
+    }
 
     void Start()
     {
 
         //테스트용 생명력 기본제공 사망 아님으로 처리
-        Death = false;
         Damaging = false;
 
 
@@ -137,7 +127,7 @@ public class NinjaControl : MonoBehaviour
         {
             if (gameObject.transform.position != new Vector3(-6.74f, 0, 0)) //그리고 x좌표가 벗어났을때(장애물에 의해 밀려나거나) 
             {
-                transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(targetPosition.transform.position.x, transform.position.y, transform.position.z), 0.1f);
+                transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(mainSys.StartPosition, transform.position.y, transform.position.z), 0.1f);
                 //길다 x좌표는 타겟의x좌표로. 대신 y좌표는 z좌표는 그대로 두고 transform.position.y가 아무것도 이동원하지 않고 빈칸 채울때 쓰는 방법
             }
             else
@@ -344,12 +334,12 @@ public class NinjaControl : MonoBehaviour
             //Application.LoadLevel ("Game");
         }
 
-        if (Life == 0)
+        if (life.Life == 0)
         {
-            if (Death == false)
+            if (life.Death == false)
             {
                 Debug.Log("YOUDIED");
-                Death = true;
+                life.Death = true;
                 gameObject.GetComponent<Animator>().Play("die");
                 StartCoroutine("Killaction");
                 return;
@@ -359,9 +349,9 @@ public class NinjaControl : MonoBehaviour
 
         if (gameObject.transform.position.y <= -12f)
         {
-            if (Death == false)
+            if (life.Death == false)
             {
-                Death = true;
+                life.Death = true;
                 Debug.Log("falldown");
             }
 
@@ -411,7 +401,7 @@ public class NinjaControl : MonoBehaviour
             Debug.Log("HitTheWall");
             gameObject.GetComponent<Animator>().Play("ouch");
             Damaging = true;
-            Life = Life - 1;
+            life.Life = life.Life - 1;
         }
 
         if (other.gameObject.CompareTag("Enemy"))
@@ -420,7 +410,7 @@ public class NinjaControl : MonoBehaviour
             Debug.Log("HitbyEnemy");
             gameObject.GetComponent<Animator>().Play("ouch"); //곧 맞아죽기 벽에 박고 죽기가 구분될 예정이기 때문
             Damaging = true;
-            Life = Life - 1;
+            life.Life = life.Life - 1;
         }
 
         if (other.gameObject.CompareTag("Dodge"))
@@ -429,7 +419,7 @@ public class NinjaControl : MonoBehaviour
             Debug.Log("YOUTRAPED");
             gameObject.GetComponent<Animator>().Play("ouch"); //곧 맞아죽기 벽에 박고 죽기가 구분될 예정이기 때문
             Damaging = true;
-            Life = Life - 1;
+            life.Life = life.Life - 1;
         }
     }
 

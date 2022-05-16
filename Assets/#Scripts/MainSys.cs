@@ -7,7 +7,7 @@ using UnityEngine.Audio;
 
 public class MainSys : MonoBehaviour
 {
-    NinjaControl ninjaControl;
+    CharacterInfo characterInfo;
     Levelplayer levelPlayer;
     Minimapplayer minimapPlayer;
 
@@ -21,6 +21,7 @@ public class MainSys : MonoBehaviour
     public GameObject speedup;
     public GameObject Black;
     public GameObject Gameover;
+    public int StartPosition;
     public float gear1;
     public float gear2;
     public float gear3;
@@ -40,7 +41,7 @@ public class MainSys : MonoBehaviour
     void Awake()
     {
         timepause = false;
-        ninjaControl = GameObject.Find("Player").GetComponent<NinjaControl>();
+        characterInfo = GameObject.Find("CharacterInfo").GetComponent<CharacterInfo>();
         levelPlayer = GameObject.Find("LevelMaker").GetComponent<Levelplayer>();
         minimapPlayer = GameObject.Find("MinimapMaker").GetComponent<Minimapplayer>();
 
@@ -77,7 +78,7 @@ public class MainSys : MonoBehaviour
         timeTimer.text = simpletime.ToString(); //경과시간 출력기
         Score.text = simpletime.ToString();
 
-        if (ninjaControl.Death == true)
+        if (characterInfo.Death == true)
         {
             levelPlayer.start = false;
             minimapPlayer.start = false;
