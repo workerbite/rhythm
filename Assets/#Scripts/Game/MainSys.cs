@@ -7,7 +7,6 @@ using UnityEngine.Audio;
 
 public class MainSys : MonoBehaviour
 {
-    CharacterInfo characterInfo;
     Levelplayer levelPlayer;
     Minimapplayer minimapPlayer;
 
@@ -21,12 +20,14 @@ public class MainSys : MonoBehaviour
     public GameObject speedup;
     public GameObject Black;
     public GameObject Gameover;
+    public GameObject Gotoselect;
     public int StartPosition;
     public float gear1;
     public float gear2;
     public float gear3;
     public float gear4;
     public float gear5;
+    public bool Death;
 
 
 
@@ -40,8 +41,8 @@ public class MainSys : MonoBehaviour
 
     void Awake()
     {
+        Death = false;
         timepause = false;
-        characterInfo = GameObject.Find("CharacterInfo").GetComponent<CharacterInfo>();
         levelPlayer = GameObject.Find("LevelMaker").GetComponent<Levelplayer>();
         minimapPlayer = GameObject.Find("MinimapMaker").GetComponent<Minimapplayer>();
 
@@ -51,6 +52,7 @@ public class MainSys : MonoBehaviour
 
         Black.gameObject.SetActive(false);
         Gameover.gameObject.SetActive(false);
+        Gotoselect.gameObject.SetActive(false);
     }
 
     // Start is called before the first frame update
@@ -78,11 +80,12 @@ public class MainSys : MonoBehaviour
         timeTimer.text = simpletime.ToString(); //경과시간 출력기
         Score.text = simpletime.ToString();
 
-        if (characterInfo.Death == true)
+        if (Death == true)
         {
             levelPlayer.start = false;
             minimapPlayer.start = false;
             Black.gameObject.SetActive(true);
+            Gotoselect.gameObject.SetActive(true);
             Gameover.gameObject.SetActive(true);
             speedup.gameObject.SetActive(false);
             timepause = true;

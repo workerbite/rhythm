@@ -686,8 +686,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c922a1ef1f6880a48a70c5d72f61fde5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Life: 2
-  Death: 0
+  Life: 6
+  Dead: 0
   c_jumpSound: {fileID: 8300000, guid: 76011a607f95b3849af6b2af43700464, type: 3}
   c_attackSound: {fileID: 8300000, guid: 741e4f22dff45494caea67f1ec200311, type: 3}
   c_dodgeSound: {fileID: 8300000, guid: f9b509c57272be54dadd6079a3c14160, type: 3}

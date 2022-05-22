@@ -336,10 +336,10 @@ public class PlayerControl : MonoBehaviour
 
         if (life.Life == 0)
         {
-            if (life.Death == false)
+            if (life.Dead == false)
             {
                 Debug.Log("YOUDIED");
-                life.Death = true;
+                life.Dead = true;
                 gameObject.GetComponent<Animator>().Play("die");
                 StartCoroutine("Killaction");
                 return;
@@ -349,9 +349,9 @@ public class PlayerControl : MonoBehaviour
 
         if (gameObject.transform.position.y <= -12f)
         {
-            if (life.Death == false)
+            if (life.Dead == false)
             {
-                life.Death = true;
+                life.Dead = true;
                 Debug.Log("falldown");
             }
 
