@@ -5,7 +5,7 @@ using UnityEngine;
 public enum Character //선택 캐릭터명 변수를 열거형으로 정리했다 열거형명 "Character"
 {
 
-    Chara_1, Chara_2
+    Chara_1, Chara_2, Chara_3, Chara_4, Chara_5, Chara_6, Chara_7, Chara_8, Chara_9, Chara_10, Chara_11, Chara_12
 
 }
 
@@ -22,7 +22,7 @@ public class CharaMgr : MonoBehaviour
         DontDestroyOnLoad(gameObject); //스크립트가 씬을 넘나들어도 파괴되지 않는다.
     }
 
-    void OnEnable()
+    void OnDisable()
     {
         int type = PlayerPrefs.GetInt("whatchara", (int)currentCharacter);
         if (type == 0)

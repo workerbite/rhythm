@@ -11,9 +11,10 @@ public class ModeSelect : MonoBehaviour
 
     private void Awake()
     {
-        SelectMode(0);
+        currentMode = PlayerPrefs.GetInt("lastmode", 0);
+        SelectMode(currentMode);
+        Debug.Log("load" + currentMode);
     }
-
 
     private void SelectMode(int _index)
     {
@@ -25,9 +26,14 @@ public class ModeSelect : MonoBehaviour
         }
     }
 
+
     public void ChangeMode(int _change)
     {
         currentMode += _change;
         SelectMode(currentMode);
+        PlayerPrefs.SetInt("lastmode", currentMode);
+        PlayerPrefs.Save();
+        Debug.Log(currentMode);
     }
+
 }
