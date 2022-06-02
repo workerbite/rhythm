@@ -26,7 +26,7 @@ public class SelectChar : MonoBehaviour
         {
             if (chars[i] != this) chars[i].OnDeSelect(); //SelectChar[] 조건에 안맞는것들,즉 선택되지 않은것은 ondeselect로 실행
         }
-        
+
     }
 
     void OnDeSelect()

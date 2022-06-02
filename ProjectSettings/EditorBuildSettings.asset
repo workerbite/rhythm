@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/#Scene/Select.unity
     guid: 968d18a1be2c460488bad54b28bdba00
   - enabled: 1
-    path: Assets/#Scene/Game.unity
+    path: Assets/#Scene/Game1.unity
     guid: fcd524dc2000a914f890dc75a5428664
   - enabled: 1
     path: Assets/#Scene/LoadingScene.unity

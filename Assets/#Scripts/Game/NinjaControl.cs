@@ -340,7 +340,7 @@ public class NinjaControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             Time.timeScale = 1;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(3);
             //Application.LoadLevel ("Game");
         }
 

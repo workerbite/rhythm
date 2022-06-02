@@ -90,7 +90,7 @@ public class MainSys : MonoBehaviour
             speedup.gameObject.SetActive(false);
             timepause = true;
             pitchValue = 0;
-            volumeValue = 0;
+            volumeValue = 1;
         }
         else
         {
