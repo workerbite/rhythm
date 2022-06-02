@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8306571206877124047}
   - component: {fileID: 6690197239821388741}
-  - component: {fileID: 5084772466404463639}
   m_Layer: 0
   m_Name: PO3
   m_TagString: Ground
@@ -84,16 +83,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &5084772466404463639
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4915677123707775231}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 9, y: 2.4, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}

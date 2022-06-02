@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7851197125278741131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7851197125278741129}
+  - component: {fileID: 7851197125278741130}
+  m_Layer: 0
+  m_Name: MapTool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7851197125278741129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7851197125278741131}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7851197125278741130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7851197125278741131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efdcea6ec76a8ac468472565d8d0257d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fileName: 1
+  _speed: 15
+  _blockPrefabs:
+  - {fileID: 8481345400569440258, guid: 7bc59b908778385489d4fc50fac98b73, type: 3}
+  - {fileID: 6238798239641437073, guid: 980eb5b7986997048a2e7fb8074dbee0, type: 3}
+  - {fileID: 7437218434993695073, guid: 06d7742742e356c4ba6d702b5cb4e796, type: 3}
+  - {fileID: 2849758171336072905, guid: b920dda79468add4daaae1e84f7f86b4, type: 3}
+  - {fileID: 5797997102259281866, guid: faa3f8b28cf10fb4283fe32dd8afd7d5, type: 3}
+  - {fileID: 6714652496622271555, guid: 50e7b503d3493604b874ec9c8dc6b06e, type: 3}
+  - {fileID: 4672254805287097140, guid: 58dadf2e1cc35d04da5a295181fb0724, type: 3}
+  - {fileID: 6257970967609205249, guid: ab14aec48f9d8e7438a1b0a0f7b20988, type: 3}
+  - {fileID: 4915677123707775231, guid: 323bba402b1d55b4b839ae906f30a6b4, type: 3}
+  - {fileID: 7148918503906571284, guid: 9dc9a8fc95a68f145b93b903f8efb01b, type: 3}
+  - {fileID: 5224300619213821654, guid: 79be0fa550526ce47a1c331ee0363e41, type: 3}
+  - {fileID: 7812092768005718809, guid: dd2a04e076251d0429cbea7190a0aba8, type: 3}
+  _level:
+    blockList:
+    - type: 0
+      enemys: []
+    - type: 1
+      enemys: []
+    - type: 3
+      enemys: []
+    - type: 4
+      enemys: []
+    - type: 6
+      enemys: []
+    - type: 7
+      enemys: []
+    - type: 9
+      enemys: []
+    - type: 10
+      enemys: []
+    - type: 11
+      enemys: []
+    - type: 8
+      enemys: []
+    - type: 1
+      enemys: []
+    - type: 1
+      enemys: []
+    - type: 1
+      enemys: []
+    - type: 1
+      enemys: []
+    - type: 1
+      enemys: []
+    - type: 1
+      enemys: []
+    - type: 1
+      enemys: []
+    - type: 1
+      enemys: []
+    - type: 1
+      enemys: []
+    - type: 1
+      enemys: []
+    - type: 1
+      enemys: []
+  _blockList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
