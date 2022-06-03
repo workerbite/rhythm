@@ -11,7 +11,7 @@ public class PlayerControl : MonoBehaviour
 
 
     //시스템 보조용
-    public int StartPosition;
+    //public int StartPosition;
 
     //점프를 위한 
     private bool IsJumping;   //점프 가능상태 
@@ -125,7 +125,7 @@ public class PlayerControl : MonoBehaviour
         //행동불가인 점프킬과 생존시 언제나 해당 위치로 자동정렬해주기 기능.
         if (Jumpkill == false) //점프킬이 꺼져있으면
         {
-            if (gameObject.transform.position != new Vector3(-6.74f, 0, 0)) //그리고 x좌표가 벗어났을때(장애물에 의해 밀려나거나) 
+            if (gameObject.transform.position != new Vector3(-7f, 0, 0)) //그리고 x좌표가 벗어났을때(장애물에 의해 밀려나거나) 
             {
                 transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(mainSys.StartPosition, transform.position.y, transform.position.z), 0.1f);
                 //길다 x좌표는 타겟의x좌표로. 대신 y좌표는 z좌표는 그대로 두고 transform.position.y가 아무것도 이동원하지 않고 빈칸 채울때 쓰는 방법
