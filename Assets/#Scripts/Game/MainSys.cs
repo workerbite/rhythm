@@ -8,7 +8,7 @@ using UnityEngine.Audio;
 public class MainSys : MonoBehaviour
 {
     Levelplayer levelPlayer;
-    Minimapplayer minimapPlayer;
+    //Minimapplayer minimapPlayer;
 
     public Text timeTimer;
     public Text Score;
@@ -44,7 +44,7 @@ public class MainSys : MonoBehaviour
         Death = false;
         timepause = false;
         levelPlayer = GameObject.Find("LevelMaker").GetComponent<Levelplayer>();
-        minimapPlayer = GameObject.Find("MinimapMaker").GetComponent<Minimapplayer>();
+        //minimapPlayer = GameObject.Find("MinimapMaker").GetComponent<Minimapplayer>();
 
         audioSource = GetComponent<AudioSource>();
 
@@ -83,7 +83,7 @@ public class MainSys : MonoBehaviour
         if (Death == true)
         {
             levelPlayer.start = false;
-            minimapPlayer.start = false;
+            //minimapPlayer.start = false;
             Black.gameObject.SetActive(true);
             Gotoselect.gameObject.SetActive(true);
             Gameover.gameObject.SetActive(true);

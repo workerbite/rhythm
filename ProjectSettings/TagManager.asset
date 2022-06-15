@@ -10,6 +10,13 @@ TagManager:
   - IdleZone
   - Enemy
   - Dodge
+  - Note
+  - EnemyPer
+  - DodgePer
+  - Attack
+  - AttackPer
+  - Dodging
+  - DodgingPer
   layers:
   - Default
   - TransparentFX
@@ -17,15 +24,15 @@ TagManager:
   - 
   - Water
   - UI
+  - PlayerDamage
+  - Enemy
+  - Dodge
+  - Attack
+  - AttackPer
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - DodgePer
+  - Dodging
+  - DodgingPer
   - 
   - 
   - 

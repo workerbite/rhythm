@@ -397,29 +397,26 @@ public class PlayerControl : MonoBehaviour
 
         if (other.gameObject.CompareTag("Wall"))
         {
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
             Debug.Log("HitTheWall");
             gameObject.GetComponent<Animator>().Play("ouch");
-            Damaging = true;
-            life.Life = life.Life - 1;
+            StartCoroutine("Hurt");
         }
 
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
             Debug.Log("HitbyEnemy");
-            gameObject.GetComponent<Animator>().Play("ouch"); //곧 맞아죽기 벽에 박고 죽기가 구분될 예정이기 때문
-            Damaging = true;
-            life.Life = life.Life - 1;
+            gameObject.GetComponent<Animator>().Play("ouch"); //곧 맞아죽기 벽에 박고 죽기가 구분될 예정이기 때문                                 
+            StartCoroutine("Hurt");
         }
 
         if (other.gameObject.CompareTag("Dodge"))
         {
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
             Debug.Log("YOUTRAPED");
             gameObject.GetComponent<Animator>().Play("ouch"); //곧 맞아죽기 벽에 박고 죽기가 구분될 예정이기 때문
-            Damaging = true;
-            life.Life = life.Life - 1;
+            StartCoroutine("Hurt");
         }
     }
 
@@ -430,6 +427,18 @@ public class PlayerControl : MonoBehaviour
     {
         Jumpkill = true;
         gameObject.GetComponent<BoxCollider>().enabled = false;
+        gameObject.GetComponent<Animator>().Play("die");
         yield return new WaitForEndOfFrame();
+    }
+
+    IEnumerator Hurt()
+    {
+        Jumpkill = true;
+        life.Life = life.Life - 1;
+        Damaging = true;
+        gameObject.layer = 6;
+        yield return new WaitForSecondsRealtime(0.1f);
+        gameObject.layer = 31;
+        Jumpkill = false;
     }
 }
