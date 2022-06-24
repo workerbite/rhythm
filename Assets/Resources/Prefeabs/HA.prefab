@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 323357421428962633}
   m_Layer: 0
   m_Name: HA
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,16 +146,39 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4466030266847323137, guid: b3a66b47a335dbb4caea6f9f3b99084a,
+        type: 3}
+      propertyPath: Collider
+      value: 
+      objectReference: {fileID: 2601174534411450082}
+    - target: {fileID: 4682641383762947694, guid: b3a66b47a335dbb4caea6f9f3b99084a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dodge
+      objectReference: {fileID: 0}
     - target: {fileID: 7261016110603566958, guid: b3a66b47a335dbb4caea6f9f3b99084a,
         type: 3}
       propertyPath: m_Name
       value: DEnemy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7261016110603566958, guid: b3a66b47a335dbb4caea6f9f3b99084a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8576490944980671322, guid: b3a66b47a335dbb4caea6f9f3b99084a, type: 3}
+    - {fileID: 6068314268298545622, guid: b3a66b47a335dbb4caea6f9f3b99084a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b3a66b47a335dbb4caea6f9f3b99084a, type: 3}
 --- !u!4 &7180858746790164152 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 523164187371122228, guid: b3a66b47a335dbb4caea6f9f3b99084a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7270269891965950092}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2601174534411450082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4682641383762947694, guid: b3a66b47a335dbb4caea6f9f3b99084a,
     type: 3}
   m_PrefabInstance: {fileID: 7270269891965950092}
   m_PrefabAsset: {fileID: 0}

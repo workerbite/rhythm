@@ -20,7 +20,7 @@ public class Logoend : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(1); //02_TitleScene·Î °¡¶ó
         Debug.Log("logo end");
     }
 

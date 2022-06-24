@@ -77,6 +77,8 @@ public class EditorMaptool : Editor
         {
             t.ButtonCreateBlock(BlockModel.Type.SK);
         }
+        EditorGUILayout.EndHorizontal();
+        EditorGUILayout.BeginHorizontal();
 
         if (GUILayout.Button("SN"))
         {
@@ -92,6 +94,26 @@ public class EditorMaptool : Editor
         if (GUILayout.Button("DH"))
         {
             t.ButtonCreateBlock(BlockModel.Type.DH);
+
+        }
+
+        if (GUILayout.Button("MStart"))
+        {
+            t.ButtonCreateBlock(BlockModel.Type.MStart);
+
+        }
+        EditorGUILayout.EndHorizontal();
+        EditorGUILayout.BeginHorizontal();
+
+        if (GUILayout.Button("Empty"))
+        {
+            t.ButtonCreateBlock(BlockModel.Type.Empty);
+
+        }
+
+        if (GUILayout.Button("End"))
+        {
+            t.ButtonCreateBlock(BlockModel.Type.End);
 
         }
 

@@ -18,7 +18,10 @@ public class BlockModel
         SK,
         SN,
         HA,
-        DH
+        DH,
+        MStart,
+        Empty,
+        End
     };
 
     public Type type = Type.DK;

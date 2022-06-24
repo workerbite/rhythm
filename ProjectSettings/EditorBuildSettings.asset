@@ -6,24 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/#Scene/Logo.unity
+    path: Assets/01_Scenes/01_LogoScene.unity
     guid: f187fd3794d468d4281fd9d6bb244a3d
   - enabled: 1
-    path: Assets/#Scene/TitleScene.unity
+    path: Assets/01_Scenes/02_TitleScene.unity
     guid: e96d712df06095f47913864c7deeb800
   - enabled: 1
-    path: Assets/#Scene/ModeSelect.unity
+    path: Assets/01_Scenes/03_ModeSelect.unity
     guid: b6fe54a1b8256574d94017d290f27c15
   - enabled: 1
-    path: Assets/#Scene/Select.unity
+    path: Assets/01_Scenes/04_SongSelect.unity
     guid: 968d18a1be2c460488bad54b28bdba00
   - enabled: 1
-    path: Assets/#Scene/Game1.unity
+    path: Assets/01_Scenes/05_GameScene_1.unity
     guid: fcd524dc2000a914f890dc75a5428664
   - enabled: 1
-    path: Assets/#Scene/LoadingScene.unity
+    path: Assets/01_Scenes/90_FakeLoading.unity
+    guid: f0630471fa47bd64b9dc036063dbe3ba
+  - enabled: 1
+    path: Assets/01_Scenes/91_LoadingScene.unity
     guid: 47959f9d355a78e41957fedfcfcaec85
   - enabled: 1
-    path: Assets/#Scene/Notable.unity
+    path: Assets/01_Scenes/92_Notable.unity
     guid: 663ab1827b9b50a41b924cd0c3b5d8e4
   m_configObjects: {}

@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6862123376007462902}
   - component: {fileID: 323357421428962633}
+  - component: {fileID: 2073297177633135724}
   m_Layer: 0
   m_Name: MStart
-  m_TagString: Ground
+  m_TagString: MusicStarter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,3 +84,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &2073297177633135724
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6238798239641437073}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9, y: 2.4, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}

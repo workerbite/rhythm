@@ -17,6 +17,8 @@ TagManager:
   - AttackPer
   - Dodging
   - DodgingPer
+  - MusicStarter
+  - End
   layers:
   - Default
   - TransparentFX
