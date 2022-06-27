@@ -327,8 +327,6 @@ public class PlayerControl : MonoBehaviour
 
         }
 
-
-
     }
 
     void OnCollisionEnter(Collision collision)
@@ -388,7 +386,7 @@ public class PlayerControl : MonoBehaviour
         if (other.gameObject.CompareTag("GameController"))
         {
             pos = this.gameObject.transform.position;
-            Judgement.instance.Hight = pos.y;
+            Judgement.instance.Hight = pos.y + 3.0f;
             Debug.Log(pos.y);
         }
     }

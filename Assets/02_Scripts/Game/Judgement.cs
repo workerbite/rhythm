@@ -40,9 +40,11 @@ public class Judgement : MonoBehaviour
     public bool musicend = false;
     public bool Camera = false;
     public bool CameraShot = false;
-    public bool CameraOk = false;
+    public bool CameraPerpect = false;
+    public bool CameraLittleUp = false;
     public bool CameraUp = false;
     public bool CameraTooUp = false;
+    public bool CameraLittleDown = false;
     public bool CameraDown = false;
     public bool CameraTooDown = false;
     public bool CameraFail = false;

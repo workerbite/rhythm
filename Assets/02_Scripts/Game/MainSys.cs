@@ -63,11 +63,17 @@ public class MainSys : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Judgement.instance.CameraOk == true)
+        if (Judgement.instance.CameraPerpect == true)
         {
             Chara.gameObject.transform.localPosition = new Vector3(0, 0, 0);
             StartCoroutine(OpenPicture());
             Debug.Log("안이동");
+        }
+        else if (Judgement.instance.CameraLittleUp == true)
+        {
+            Chara.gameObject.transform.localPosition = new Vector3(0, 0.08f, 0);
+            StartCoroutine(OpenPicture());
+            Debug.Log("이동");
         }
         else if (Judgement.instance.CameraUp == true)
         {
@@ -78,6 +84,12 @@ public class MainSys : MonoBehaviour
         else if (Judgement.instance.CameraTooUp == true)
         {
             Chara.gameObject.transform.localPosition = new Vector3(0, 0.35f, 0);
+            StartCoroutine(OpenPicture());
+            Debug.Log("이동");
+        }
+        else if (Judgement.instance.CameraLittleDown == true)
+        {
+            Chara.gameObject.transform.localPosition = new Vector3(0, -0.09f, 0);
             StartCoroutine(OpenPicture());
             Debug.Log("이동");
         }
