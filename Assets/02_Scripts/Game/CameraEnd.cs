@@ -38,14 +38,14 @@ public class CameraEnd : MonoBehaviour
             else if (Judgement.instance.Hight > 3.9f && Judgement.instance.Hight <= 4.4f)
             {
                 Debug.Log("CameraUp");
-                Judgement.instance.nowscore += 300;
+                Judgement.instance.nowscore += 200;
                 Judgement.instance.CameraUp = true;
                 StartCoroutine(CoolDown());
             }
             else if (Judgement.instance.Hight > 4.4f && Judgement.instance.Hight <= 5.0f)
             {
                 Debug.Log("CameraTooUp");
-                Judgement.instance.nowscore += 200;
+                Judgement.instance.nowscore += 100;
                 Judgement.instance.CameraTooUp = true;
                 StartCoroutine(CoolDown());
             }
@@ -59,14 +59,14 @@ public class CameraEnd : MonoBehaviour
             else if (Judgement.instance.Hight >= 2.2f && Judgement.instance.Hight < 2.7f)
             {
                 Debug.Log("CameraDown");
-                Judgement.instance.nowscore += 300;
+                Judgement.instance.nowscore += 200;
                 Judgement.instance.CameraDown = true;
                 StartCoroutine(CoolDown());
             }
             else if (Judgement.instance.Hight >= 1.5f && Judgement.instance.Hight < 2.2f)
             {
                 Debug.Log("CameraTooDown");
-                Judgement.instance.nowscore += 200;
+                Judgement.instance.nowscore += 100;
                 Judgement.instance.CameraTooDown = true;
                 StartCoroutine(CoolDown());
             }

@@ -21,7 +21,8 @@ public class BlockModel
         DH,
         MStart,
         Empty,
-        End
+        End,
+        SN1
     };
 
     public Type type = Type.DK;

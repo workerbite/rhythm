@@ -117,6 +117,12 @@ public class EditorMaptool : Editor
 
         }
 
+        if (GUILayout.Button("SN1"))
+        {
+            t.ButtonCreateBlock(BlockModel.Type.SN1);
+
+        }
+
         EditorGUILayout.EndHorizontal();
 
         if (GUILayout.Button("Clear"))
