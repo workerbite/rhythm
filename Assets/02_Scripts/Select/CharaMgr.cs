@@ -10,9 +10,9 @@ public enum Character //선택 캐릭터명 변수를 열거형으로 정리했다 열거형명 "Chara
 }
 
 public class CharaMgr : MonoBehaviour
-{
+{    
     public static CharaMgr instance; //싱글톤 선언
-
+    public int HaveTutorial = 0;
 
 
     private void Awake() //(*싱글톤)private로 시작하며 다룰수 있는 객체는 한개. 다른곳에서 생성하지 못하고 이곳에서만 다루게 된다.
@@ -43,6 +43,9 @@ public class CharaMgr : MonoBehaviour
     {
 
         PlayerPrefs.SetInt("whatchara", (int)currentCharacter);
+        PlayerPrefs.Save();
+
+        PlayerPrefs.SetInt("HaveTutorial", (int)HaveTutorial);
         PlayerPrefs.Save();
 
     }

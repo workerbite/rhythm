@@ -43,5 +43,6 @@ public class Songinfo : MonoBehaviour
     public float gear4Speed;
     public float gear5Speed;
     public float Speedmult = 0;
+    [TextArea]
     public string Memo;
 }

@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9025246451835624311, guid: 7adb3002b143465ca80d83e1b71af788,
+  m_Sprite: {fileID: -2645222260220940297, guid: 422e05349e28674439fe1f0780edbf68,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -118,8 +118,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Collider: {fileID: 1320036916400996260}
-  Good: {fileID: 8942186827311356054, guid: 0392b391dff80464cb067511e1cd64b7, type: 3}
-  JudgeLocation: {fileID: 3918288326766938729}
 --- !u!65 &4158675398819925667
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -132,7 +130,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.47, y: 1.21, z: 0.2}
-  m_Center: {x: -0.01, y: 0.68, z: 0}
+  m_Center: {x: -0.01, y: -0.64, z: 0}
 --- !u!1 &3825488625984602231
 GameObject:
   m_ObjectHideFlags: 0

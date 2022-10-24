@@ -31,6 +31,12 @@ public class enemydie : MonoBehaviour
             StartCoroutine("Destroy");
             Judgement.instance.nowscore += 50;
         }
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+            gameObject.GetComponent<Animator>().Play("enemyattack");
+            Collider.gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
     }
 
     IEnumerator Destroy()

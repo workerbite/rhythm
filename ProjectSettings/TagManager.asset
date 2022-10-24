@@ -19,6 +19,7 @@ TagManager:
   - DodgingPer
   - MusicStarter
   - End
+  - TalkTarget
   layers:
   - Default
   - TransparentFX

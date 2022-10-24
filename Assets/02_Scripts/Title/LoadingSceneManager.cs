@@ -29,7 +29,7 @@ public class LoadingSceneManager : MonoBehaviour
         float timer = 0.0f;
         while (!op.isDone)
         {
-            yield return null;
+            yield return new WaitForSecondsRealtime(0.5f);
             timer += Time.deltaTime;
             if (op.progress < 0.9f)
             {

@@ -5,6 +5,7 @@ using UnityEngine;
 public class dodgedie : MonoBehaviour
 {
     public GameObject Collider;
+    public GameObject Bomb;
 
 
     void Start()
@@ -30,6 +31,13 @@ public class dodgedie : MonoBehaviour
             Collider.gameObject.GetComponent<BoxCollider>().enabled = false;
             StartCoroutine("Destroy");
             Judgement.instance.nowscore += 50;
+        }
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+            gameObject.GetComponent<Animator>().Play("dodgeattack");
+            Collider.gameObject.GetComponent<BoxCollider>().enabled = false;
+            Bomb.gameObject.SetActive(true);
         }
     }
 

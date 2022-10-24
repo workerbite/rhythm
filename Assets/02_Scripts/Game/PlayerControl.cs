@@ -160,7 +160,7 @@ public class PlayerControl : MonoBehaviour
                 BDDamageTime = Time.fixedTime;
                 if (IsJumping == true)
                 {
-                    gameObject.GetComponent<Animator>().Play("Aattack2");
+                    gameObject.GetComponent<Animator>().Play("attack2");
                     PlaySound("Attack");
                 }
                 else
@@ -173,7 +173,7 @@ public class PlayerControl : MonoBehaviour
                 return;
             }
         }
-        if (Time.fixedTime >= IsAttackTime + 0.3f)
+        if (Time.fixedTime >= IsAttackTime + 0.8f)
         {
             IsAttacking = true;
             DBAttacking = true;
@@ -215,7 +215,7 @@ public class PlayerControl : MonoBehaviour
                 BDMissTime = Time.fixedTime;
                 if (IsJumping == true)
                 {
-                    gameObject.GetComponent<Animator>().Play("Ddodge2");
+                    gameObject.GetComponent<Animator>().Play("dodge2");
                     PlaySound("Dodge");
                 }
                 else
@@ -311,7 +311,9 @@ public class PlayerControl : MonoBehaviour
                 Debug.Log("YOUDIED");
                 life.Dead = true;
                 gameObject.GetComponent<Animator>().Play("die");
+                gameObject.GetComponent<Rigidbody>().AddForce(0, 600, 0);
                 StartCoroutine("Killaction");
+                Jumpkill = true;
                 return;
             }
 

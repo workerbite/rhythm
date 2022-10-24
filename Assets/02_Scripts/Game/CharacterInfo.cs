@@ -12,6 +12,7 @@ public class CharacterInfo : MonoBehaviour
     public float Life;
     public bool Dead;
     public bool Female;
+    public int charanumber;
 
 
     //사운드를 위한

@@ -200,6 +200,7 @@ public class MainSys : MonoBehaviour
         yield return new WaitForSecondsRealtime(3f);
         Gameclear.gameObject.SetActive(true);
         Debug.Log("yataa");
+        yield return new WaitForSecondsRealtime(9999f);
     }
 
     IEnumerator Cameraplay()

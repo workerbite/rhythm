@@ -2082,17 +2082,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charPrefabs:
   - {fileID: 7430837610078894286, guid: d118b6da1fac21c49acdb80e7808705c, type: 3}
-  - {fileID: 541786145234499795, guid: c94cefb7ae8bd8842bcc909d9a294ee8, type: 3}
+  - {fileID: 915619531783283900, guid: c94cefb7ae8bd8842bcc909d9a294ee8, type: 3}
   - {fileID: 541786145234499795, guid: 9f4cfaa0e25fbd445b41ff924c5a7355, type: 3}
-  - {fileID: 541786145234499795, guid: c94cefb7ae8bd8842bcc909d9a294ee8, type: 3}
-  - {fileID: 541786145234499795, guid: c94cefb7ae8bd8842bcc909d9a294ee8, type: 3}
-  - {fileID: 541786145234499795, guid: c94cefb7ae8bd8842bcc909d9a294ee8, type: 3}
-  - {fileID: 541786145234499795, guid: c94cefb7ae8bd8842bcc909d9a294ee8, type: 3}
-  - {fileID: 541786145234499795, guid: c94cefb7ae8bd8842bcc909d9a294ee8, type: 3}
-  - {fileID: 541786145234499795, guid: c94cefb7ae8bd8842bcc909d9a294ee8, type: 3}
-  - {fileID: 541786145234499795, guid: c94cefb7ae8bd8842bcc909d9a294ee8, type: 3}
-  - {fileID: 541786145234499795, guid: c94cefb7ae8bd8842bcc909d9a294ee8, type: 3}
-  - {fileID: 541786145234499795, guid: c94cefb7ae8bd8842bcc909d9a294ee8, type: 3}
   player: {fileID: 0}
 --- !u!4 &304938909
 Transform:
@@ -3358,18 +3349,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeTimer: {fileID: 1252947927}
   Score: {fileID: 1521092966}
-  speedmult: 1.2
+  thisScore: {fileID: 0}
+  Ninjafan: {fileID: 0}
   speedup: {fileID: 1753021410}
   Black: {fileID: 816707226}
   Gameover: {fileID: 1047105241}
+  Gameclear: {fileID: 0}
   Gotoselect: {fileID: 661405301}
+  Picture: {fileID: 0}
+  Chara: {fileID: 0}
   StartPosition: -7
-  gear1: 900
-  gear2: 900
-  gear3: 900
-  gear4: 900
-  gear5: 900
   Death: 0
+  Clear: 0
   pitchValue: 1
   volumeValue: 1
 --- !u!82 &516166004
@@ -4108,17 +4099,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1202235152, guid: 55c7872087a13094390ad680e2751e44, type: 3}
+    - target: {fileID: 173022995, guid: 55c7872087a13094390ad680e2751e44, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 1581238165, guid: 55c7872087a13094390ad680e2751e44, type: 3}
+    - target: {fileID: 186743275, guid: 55c7872087a13094390ad680e2751e44, type: 3}
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 1865725514, guid: 55c7872087a13094390ad680e2751e44, type: 3}
+    - target: {fileID: 601984363, guid: 55c7872087a13094390ad680e2751e44, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202235152, guid: 55c7872087a13094390ad680e2751e44, type: 3}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1581238165, guid: 55c7872087a13094390ad680e2751e44, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865725514, guid: 55c7872087a13094390ad680e2751e44, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5073555477835448136, guid: 55c7872087a13094390ad680e2751e44,
         type: 3}
@@ -4133,7 +4136,7 @@ PrefabInstance:
     - target: {fileID: 5073555478189992226, guid: 55c7872087a13094390ad680e2751e44,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5073555478189992226, guid: 55c7872087a13094390ad680e2751e44,
         type: 3}
@@ -4269,6 +4272,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_MatchWidthOrHeight
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5073555478393042268, guid: 55c7872087a13094390ad680e2751e44,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5073555478393042271, guid: 55c7872087a13094390ad680e2751e44,
         type: 3}
