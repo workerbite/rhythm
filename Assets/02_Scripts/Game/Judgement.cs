@@ -50,4 +50,9 @@ public class Judgement : MonoBehaviour
     public bool CameraFail = false;
     public int nowscore = 0;
     public float Hight = 0;
+    public int GetTalkNumber;
+    public int TotalTalkNumber;
+    public bool TalkClose;
+    public bool TalkDisable;
+    public int emotion;
 }

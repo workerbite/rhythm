@@ -20,6 +20,8 @@ TagManager:
   - MusicStarter
   - End
   - TalkTarget
+  - TalkCollider
+  - TutoTarget
   layers:
   - Default
   - TransparentFX
@@ -36,7 +38,7 @@ TagManager:
   - DodgePer
   - Dodging
   - DodgingPer
-  - 
+  - Object
   - 
   - 
   - 
