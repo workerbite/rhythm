@@ -34,7 +34,9 @@ public class Walldie : MonoBehaviour
 
     IEnumerator Destroy()
     {
-        yield return new WaitForSecondsRealtime(1.0f);
-        Destroy(transform.parent.gameObject);
+        Judgement.instance.jumpsuccess = true;
+        yield return new WaitForEndOfFrame();
+        Destroy(this.gameObject);
+        Judgement.instance.jumpsuccess = false;
     }
 }

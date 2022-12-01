@@ -103,7 +103,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Collider: {fileID: 915619531488488889}
   Cool: {fileID: 2197548244025164762, guid: 0b5c5100153ac544ca5f8cd8793144ee, type: 3}
-  isGood: 0
   JudgeLocation: {fileID: 7758378841302973662}
 --- !u!54 &915619531488488883
 Rigidbody:
@@ -782,7 +781,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Collider: {fileID: 5837589572982070472}
   dCool: {fileID: 2197548244025164762, guid: 0b5c5100153ac544ca5f8cd8793144ee, type: 3}
-  isdGood: 0
   JudgeLocation: {fileID: 7758378841302973662}
 --- !u!65 &7758378841776983353
 BoxCollider:
@@ -929,7 +927,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Collider: {fileID: 5837589573660163014}
   dCool: {fileID: 2197548244025164762, guid: 0b5c5100153ac544ca5f8cd8793144ee, type: 3}
-  isdGood: 0
   JudgeLocation: {fileID: 7758378841302973662}
 --- !u!65 &7758378840111958692
 BoxCollider:
@@ -1015,7 +1012,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ae4e93b0df40e45950b38a28cc6ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Collperpect: {fileID: 7758378839921108606}
+  Collider: {fileID: 0}
+  Cool: {fileID: 0}
+  JudgeLocation: {fileID: 0}
 --- !u!54 &7758378839921108600
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1165,7 +1164,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ae4e93b0df40e45950b38a28cc6ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Collperpect: {fileID: 7758378840114387490}
+  Collider: {fileID: 0}
+  Cool: {fileID: 0}
+  JudgeLocation: {fileID: 0}
 --- !u!54 &7758378840114387500
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1240,7 +1241,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ae4e93b0df40e45950b38a28cc6ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Collperpect: {fileID: 7758378840268223388}
+  Collider: {fileID: 0}
+  Cool: {fileID: 0}
+  JudgeLocation: {fileID: 0}
 --- !u!54 &7758378840268223360
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1315,7 +1318,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ae4e93b0df40e45950b38a28cc6ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Collperpect: {fileID: 7758378840767782394}
+  Collider: {fileID: 0}
+  Cool: {fileID: 0}
+  JudgeLocation: {fileID: 0}
 --- !u!54 &7758378840767782398
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1662,13 +1667,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c922a1ef1f6880a48a70c5d72f61fde5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Life: 3
+  Life: 4
   Dead: 0
   Female: 0
   charanumber: 200
-  c_jumpSound: {fileID: 8300000, guid: 76011a607f95b3849af6b2af43700464, type: 3}
-  c_attackSound: {fileID: 8300000, guid: 741e4f22dff45494caea67f1ec200311, type: 3}
-  c_dodgeSound: {fileID: 8300000, guid: f9b509c57272be54dadd6079a3c14160, type: 3}
+  c_jumpSound: {fileID: 8300000, guid: 4fa211153ee14ca43855a9abd471f0f6, type: 3}
+  c_attackSound: {fileID: 8300000, guid: 4fa211153ee14ca43855a9abd471f0f6, type: 3}
+  c_dodgeSound: {fileID: 8300000, guid: 4fa211153ee14ca43855a9abd471f0f6, type: 3}
 --- !u!65 &7758378840486663889
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1800,7 +1805,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Collider: {fileID: 8509756486967295736}
   Cool: {fileID: 2197548244025164762, guid: 0b5c5100153ac544ca5f8cd8793144ee, type: 3}
-  isGood: 0
   JudgeLocation: {fileID: 7758378841302973662}
 --- !u!54 &3590424785640191597
 Rigidbody:

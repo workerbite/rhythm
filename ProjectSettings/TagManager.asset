@@ -22,6 +22,14 @@ TagManager:
   - TalkTarget
   - TalkCollider
   - TutoTarget
+  - Zttack
+  - Zodge
+  - RgbBox
+  - Enemyy
+  - Health
+  - NPCcollider
+  - NPC
+  - SpeedChange
   layers:
   - Default
   - TransparentFX
@@ -39,10 +47,10 @@ TagManager:
   - Dodging
   - DodgingPer
   - Object
-  - 
-  - 
-  - 
-  - 
+  - Tutora
+  - Wall
+  - Zttack
+  - Zodge
   - 
   - 
   - 

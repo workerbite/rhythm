@@ -1,16 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class Dodgelocation : MonoBehaviour
 {
 
     public GameObject Collider;
     public GameObject dCool;
-    //public GameObject dGood;
-    public bool isdGood;
     public Transform JudgeLocation;
 
 
@@ -18,21 +14,17 @@ public class Dodgelocation : MonoBehaviour
 
     void Start()
     {
-        Collider.gameObject.SetActive(true);
-        isdGood = false;
+        Collider.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if (Judgement.instance.thisdcool == true)
         {
-            if (Judgement.instance.thisdgood == true || Judgement.instance.thisdgood == false)
-            {
-                StartCoroutine(Touch());
-            }
+            StartCoroutine("toCool");
         }
+
     }
 
 
@@ -40,18 +32,21 @@ public class Dodgelocation : MonoBehaviour
     {
 
         if (other.gameObject.CompareTag("Dodge"))
-        {           
-            Judgement.instance.thisgood = true;
-            Debug.Log("dGood");
+        {
+            StartCoroutine("CoolDown");
         }
     }
-    IEnumerator Touch()
+    IEnumerator toCool()
     {
         Instantiate(dCool, JudgeLocation.position, JudgeLocation.rotation);
-        Judgement.instance.nowscore += 50;
-        Judgement.instance.thisdcool = false;
-        Judgement.instance.thisdgood = false;
         yield return new WaitForSecondsRealtime(0.2f);
+        Debug.Log("dCool");
+    }
+    IEnumerator CoolDown()
+    {
+        this.gameObject.SetActive(false);
+        yield return new WaitForSeconds(0.2f);
+
     }
 }
 

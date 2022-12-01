@@ -1,16 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class Attacklocation : MonoBehaviour
 {
 
     public GameObject Collider;
     public GameObject Cool;
-    //public GameObject Good;
-    public bool isGood;
     public Transform JudgeLocation;
 
 
@@ -18,21 +14,17 @@ public class Attacklocation : MonoBehaviour
 
     void Start()
     {
-        Collider.gameObject.SetActive(true);
-        isGood = false;
+        Collider.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if (Judgement.instance.thiscool == true)
         {
-            if (Judgement.instance.thisgood == true || Judgement.instance.thisgood == false)
-            {
-                StartCoroutine(Touch());
-            }
+            StartCoroutine("toCool");
         }
+
     }
 
 
@@ -40,17 +32,21 @@ public class Attacklocation : MonoBehaviour
     {
 
         if (other.gameObject.CompareTag("Enemy"))
-        {
-            Judgement.instance.thisgood = true;           
-            Debug.Log("Good");          
+        {                            
+            StartCoroutine("CoolDown");
         }
     }
-    IEnumerator Touch()
+    IEnumerator toCool()
     {
         Instantiate(Cool, JudgeLocation.position, JudgeLocation.rotation);
-        Judgement.instance.nowscore += 50;
-        Judgement.instance.thiscool = false;
-        Judgement.instance.thisgood = false;
         yield return new WaitForSecondsRealtime(0.2f);
+        Debug.Log("Cool");
+    }
+
+    IEnumerator CoolDown()
+    {
+        this.gameObject.SetActive(false);
+        yield return new WaitForSeconds(0.2f);
+
     }
 }

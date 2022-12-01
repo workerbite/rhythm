@@ -23,7 +23,7 @@ public class ScoreCounter : MonoBehaviour
 
     public void Update()
     {
-        MaxScore = (float)Songinfo.instance.TotalScore;
+        MaxScore = (float)Judgement.instance.totalscore;
         MinScore = (float)Judgement.instance.nowscore;
         Percentage = (MinScore / MaxScore) * 100;
         if (endscore != Judgement.instance.nowscore && Judgement.instance.nowscore > endscore)

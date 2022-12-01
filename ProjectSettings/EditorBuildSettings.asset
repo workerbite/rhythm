@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/01_Scenes/04_TutorialZone.unity
     guid: 7ded63e7c7bf90c4698b448a44a79918
   - enabled: 1
+    path: Assets/01_Scenes/05_TutorialZone2.unity
+    guid: 39b9077aed63dd7498709b3aac0a451b
+  - enabled: 1
     path: Assets/01_Scenes/03_ModeSelect.unity
     guid: b6fe54a1b8256574d94017d290f27c15
   - enabled: 1

@@ -19,8 +19,6 @@ public class CameraStart : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             StartCoroutine(CameraActive());
-            //Ninjafan.gameObject.SetActive(true);
-            //Debug.Log("domo ninjadesu");
         }
     }
     IEnumerator CameraActive()

@@ -7,9 +7,13 @@ public class Portraint : MonoBehaviour
 {
     public Sprite Normal;
     public Sprite Happy;
-    public Sprite Supprise;
-    public Sprite Seriouse;
-    public Sprite Hurt;
+    public Sprite Angry;
+    public Sprite Love;
+    public Sprite Fun;
+    public Sprite Special;
+    public Sprite Dark;
+    public Sprite Add;
+    public Sprite Addtwo;
     private void Start()
     {
 
@@ -28,15 +32,31 @@ public class Portraint : MonoBehaviour
         }
         else if (Judgement.instance.emotion == 2)
         {
-            this.gameObject.GetComponent<Image>().sprite = Supprise;
+            this.gameObject.GetComponent<Image>().sprite = Angry;
         }
         else if (Judgement.instance.emotion == 3)
         {
-            this.gameObject.GetComponent<Image>().sprite = Seriouse;
+            this.gameObject.GetComponent<Image>().sprite = Love;
         }
         else if (Judgement.instance.emotion == 4)
         {
-            this.gameObject.GetComponent<Image>().sprite = Hurt;
+            this.gameObject.GetComponent<Image>().sprite = Fun;
+        }
+        else if (Judgement.instance.emotion == 5)
+        {
+            this.gameObject.GetComponent<Image>().sprite = Special;
+        }
+        else if (Judgement.instance.emotion == 6)
+        {
+            this.gameObject.GetComponent<Image>().sprite = Dark;
+        }
+        else if (Judgement.instance.emotion == 7)
+        {
+            this.gameObject.GetComponent<Image>().sprite = Add;
+        }
+        else if (Judgement.instance.emotion == 8)
+        {
+            this.gameObject.GetComponent<Image>().sprite = Addtwo;
         }
         else
             this.gameObject.GetComponent<Image>().sprite = Normal;

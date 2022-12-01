@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efdcea6ec76a8ac468472565d8d0257d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fileName: 1
+  _fileName: 555
   _speed: 15
   _blockPrefabs:
   - {fileID: 8481345400569440258, guid: 7bc59b908778385489d4fc50fac98b73, type: 3}
@@ -58,69 +58,12 @@ MonoBehaviour:
   - {fileID: 7148918503906571284, guid: 9dc9a8fc95a68f145b93b903f8efb01b, type: 3}
   - {fileID: 5224300619213821654, guid: 79be0fa550526ce47a1c331ee0363e41, type: 3}
   - {fileID: 7812092768005718809, guid: dd2a04e076251d0429cbea7190a0aba8, type: 3}
+  - {fileID: 6238798239641437073, guid: c14b3b995ad992f49816e1c80e180486, type: 3}
+  - {fileID: 6238798239641437073, guid: 3a02ea35280c15f48b8aef1d600f64cf, type: 3}
+  - {fileID: 6238798239641437073, guid: e3eac8cc77f26254cb4d57402219d027, type: 3}
+  - {fileID: 6238798239641437073, guid: 198323b3373bb30448efbced6a6ecbb1, type: 3}
+  - {fileID: 6238798239641437073, guid: 66671d72c2b8e44419d5aefa31064376, type: 3}
+  - {fileID: 6238798239641437073, guid: f3ecb1534de551b4a8a44497d07a8516, type: 3}
   _level:
-    blockList:
-    - type: 0
-      enemys: []
-    - type: 1
-      enemys: []
-    - type: 3
-      enemys: []
-    - type: 4
-      enemys: []
-    - type: 6
-      enemys: []
-    - type: 7
-      enemys: []
-    - type: 9
-      enemys: []
-    - type: 10
-      enemys: []
-    - type: 11
-      enemys: []
-    - type: 8
-      enemys: []
-    - type: 1
-      enemys: []
-    - type: 1
-      enemys: []
-    - type: 1
-      enemys: []
-    - type: 1
-      enemys: []
-    - type: 1
-      enemys: []
-    - type: 1
-      enemys: []
-    - type: 1
-      enemys: []
-    - type: 1
-      enemys: []
-    - type: 1
-      enemys: []
-    - type: 1
-      enemys: []
-    - type: 1
-      enemys: []
-  _blockList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+    blockList: []
+  _blockList: []
