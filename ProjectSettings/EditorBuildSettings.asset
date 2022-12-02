@@ -21,13 +21,13 @@ EditorBuildSettings:
     path: Assets/01_Scenes/05_TutorialZone2.unity
     guid: 39b9077aed63dd7498709b3aac0a451b
   - enabled: 1
-    path: Assets/01_Scenes/03_ModeSelect.unity
+    path: Assets/01_Scenes/06_ModeSelect.unity
     guid: b6fe54a1b8256574d94017d290f27c15
   - enabled: 1
-    path: Assets/01_Scenes/04_SongSelect.unity
+    path: Assets/01_Scenes/07_SongSelect.unity
     guid: 968d18a1be2c460488bad54b28bdba00
   - enabled: 1
-    path: Assets/01_Scenes/05_GameScene_1.unity
+    path: Assets/01_Scenes/10_GameScene.unity
     guid: fcd524dc2000a914f890dc75a5428664
   - enabled: 1
     path: Assets/01_Scenes/90_FakeLoading.unity

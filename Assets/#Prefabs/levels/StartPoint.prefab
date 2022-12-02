@@ -45,6 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charPrefabs:
   - {fileID: 7430837610078894286, guid: d118b6da1fac21c49acdb80e7808705c, type: 3}
-  - {fileID: 915619531783283900, guid: c94cefb7ae8bd8842bcc909d9a294ee8, type: 3}
-  - {fileID: 541786145234499795, guid: 9f4cfaa0e25fbd445b41ff924c5a7355, type: 3}
+  - {fileID: 3836763643480089209, guid: c94cefb7ae8bd8842bcc909d9a294ee8, type: 3}
+  - {fileID: 6422183297838045389, guid: 9f4cfaa0e25fbd445b41ff924c5a7355, type: 3}
   player: {fileID: 3738255138981117222}

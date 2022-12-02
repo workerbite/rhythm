@@ -32,9 +32,6 @@ public class Judgement : MonoBehaviour
     public bool bgstop = false;
 
     //진짜 판정 계열
-    public bool AttackSound = false;
-    public bool DodgeSound = false;
-    public bool JumpSound = false;
     public bool thiscool = false;
     public bool thisgood = false;
     public bool thisdcool = false;

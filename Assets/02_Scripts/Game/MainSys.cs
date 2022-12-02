@@ -36,7 +36,6 @@ public class MainSys : MonoBehaviour
         musicstarter = GameObject.Find("MusicStarter").GetComponent<MusicStarter>();
 
         Application.targetFrameRate = 60;
-
         //UI팝업 관련 초기화
         Black.gameObject.SetActive(false);
         Gameover.gameObject.SetActive(false);
@@ -105,7 +104,7 @@ public class MainSys : MonoBehaviour
         yield return new WaitForSecondsRealtime(3f);
         Gameclear.gameObject.SetActive(true);
         Debug.Log("yataa");
-        yield return new WaitForSecondsRealtime(9999f);
+        yield return new WaitForSecondsRealtime(999999f);
     }
 
     IEnumerator Cameraplay()
@@ -113,14 +112,15 @@ public class MainSys : MonoBehaviour
         Ninjafan.gameObject.SetActive(true);
         Ninjafan.gameObject.GetComponent<Animator>().Play("ninjarun");
         Debug.Log("domo ninjadesu");
-        yield return new WaitForSecondsRealtime(3.4f);
+        yield return new WaitForSeconds(3.4f);
     }
     IEnumerator Cameraend()
     {
         //Ninjafan.gameObject.SetActive(true);
         Ninjafan.gameObject.GetComponent<Animator>().Play("ninjagood");
         Debug.Log("otsukaresan");
-        yield return new WaitForSecondsRealtime(3.4f);
+        yield return new WaitForSeconds(2.6f);
+        Ninjafan.gameObject.SetActive(false);
     }
 
 }

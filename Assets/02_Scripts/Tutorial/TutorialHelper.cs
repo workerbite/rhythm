@@ -12,14 +12,11 @@ public class TutorialHelper : MonoBehaviour
     {
         if (instance == null)
             instance = this;
-
         else
         {
             if (instance != this)
                 Destroy(this.gameObject);
         }
-
-
     }
     void Start()
     {

@@ -22,7 +22,7 @@ public class Walldie : MonoBehaviour
             Collider.gameObject.GetComponent<BoxCollider>().enabled = false;
             StartCoroutine("Destroy");
         }
-        if (other.gameObject.CompareTag("Finish"))
+        if (other.gameObject.CompareTag("MusicStarter"))
         {
             gameObject.GetComponent<Animator>().Play("walldie");
             Collider.gameObject.GetComponent<BoxCollider>().enabled = false;

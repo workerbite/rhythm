@@ -14,6 +14,9 @@ public class Songinfo : MonoBehaviour
     public AudioClip jumpSound;
     public AudioClip attackSound;
     public AudioClip dodgeSound;
+    [Header("노트 메모")]
+    [TextArea]
+    public string Memo;
 
     //[Header("1Speedmult = 100BPM")]
     public float StartSpeedmult = 0f;
@@ -26,6 +29,7 @@ public class Songinfo : MonoBehaviour
 
         TotalScore = 4800;
     }
+
 
     void PlaySound(string action)
     {
@@ -52,37 +56,36 @@ public class Songinfo : MonoBehaviour
         Judgement.instance.speedmult = StartSpeedmult;
         Judgement.instance.totalscore = TotalScore;
         Judgement.instance.bgstage = BG;
+        
     }
 
     void Update()
     {
-        if (Judgement.instance.AttackSound == true)
-            StartCoroutine("AttackPlay");
-        if (Judgement.instance.DodgeSound == true)
-            StartCoroutine("DodgePlay");
-        if (Judgement.instance.JumpSound == true)
-            StartCoroutine("JumpPlay");           
+       
     }
 
+    public void AttackSound()
+    {
+        
+    }
+
+    //코루틴은 PlayerContorl에서 사용하고 있다.
     IEnumerator AttackPlay()
     {
         PlaySound("Attack");
         yield return new WaitForFixedUpdate();
-        Judgement.instance.AttackSound = false;
     }
 
     IEnumerator DodgePlay()
     {
         PlaySound("Dodge");
         yield return new WaitForFixedUpdate();
-        Judgement.instance.DodgeSound = false;
     }
 
     IEnumerator JumpPlay()
     {
         PlaySound("Jump");
         yield return new WaitForFixedUpdate();
-        Judgement.instance.JumpSound = false;
     }
 
 

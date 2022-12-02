@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour
 {
     CharacterInfo life;
     MainSys mainSys;
+    Songinfo sound;
 
 
     //시스템 보조용
@@ -57,6 +58,7 @@ public class PlayerControl : MonoBehaviour
 
         life = GameObject.Find("CharacterInfo").GetComponent<CharacterInfo>();
         mainSys = GameObject.Find("GameSystem").GetComponent<MainSys>();
+        sound = GameObject.Find("SongPlayer").GetComponent<Songinfo>();
 
     }
 
@@ -108,6 +110,7 @@ public class PlayerControl : MonoBehaviour
         Doll2.gameObject.SetActive(false);
     }
 
+
     void Update()
     {       
         //행동불가인 점프킬과 생존시 언제나 해당 위치로 자동정렬해주기 기능.
@@ -138,12 +141,12 @@ public class PlayerControl : MonoBehaviour
                 if (canJumping == false) //점프불가상태 = 점프상태 고로 !canJumping
                 {
                     gameObject.GetComponent<Animator>().Play("Aattack1");
-                    Judgement.instance.AttackSound = true;
+                    sound.StartCoroutine("AttackPlay");
                 }
                 else //공중이 아니라면 지상공격 재생
                 {
                     gameObject.GetComponent<Animator>().Play("attack1");
-                    Judgement.instance.AttackSound = true;
+                    sound.StartCoroutine("AttackPlay");
                 }
                 //StartCoroutine("AttackCoolDown");
             }
@@ -157,12 +160,12 @@ public class PlayerControl : MonoBehaviour
                 if (canJumping == true) //점프가 가능하다면 = 플레이어는 땅에있다
                 {
                     gameObject.GetComponent<Animator>().Play("attack2");
-                    Judgement.instance.AttackSound = true;
+                    sound.StartCoroutine("AttackPlay");
                 }
                 else if (canJumping == false)
                 {
                     gameObject.GetComponent<Animator>().Play("Aattack1");
-                    Judgement.instance.AttackSound = true;
+                    sound.StartCoroutine("AttackPlay");
                 }
             }
 
@@ -181,12 +184,12 @@ public class PlayerControl : MonoBehaviour
                 if (canJumping == false) //점프불가상태 = 점프상태 고로 !canJumping
                 {
                     gameObject.GetComponent<Animator>().Play("Ddodge1");
-                    Judgement.instance.DodgeSound = true;
+                    sound.StartCoroutine("DodgePlay");
                 }
                 else //공중이 아니라면 지상회피 재생
                 {
                     gameObject.GetComponent<Animator>().Play("dodge1");
-                    Judgement.instance.DodgeSound = true;
+                    sound.StartCoroutine("DodgePlay");
                 }
 
             }
@@ -200,12 +203,12 @@ public class PlayerControl : MonoBehaviour
                 if (canJumping == true)
                 {
                     gameObject.GetComponent<Animator>().Play("dodge2");
-                    Judgement.instance.DodgeSound = true;
+                    sound.StartCoroutine("DodgePlay");
                 }
                 else if (canJumping == false)
                 {
                     gameObject.GetComponent<Animator>().Play("Ddodge2");
-                    Judgement.instance.DodgeSound = true;
+                    sound.StartCoroutine("DodgePlay");
                 }
             }
 
@@ -224,7 +227,7 @@ public class PlayerControl : MonoBehaviour
                 gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
                 gameObject.GetComponent<Rigidbody>().AddForce(0, 1000, 0);
                 gameObject.GetComponent<Animator>().Play("jump");
-                Judgement.instance.JumpSound = true;
+                sound.StartCoroutine("JumpPlay");
                 //IsJumpTime = Time.fixedTime;
 
             }
@@ -234,7 +237,7 @@ public class PlayerControl : MonoBehaviour
                 gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
                 gameObject.GetComponent<Rigidbody>().AddForce(0, 1000, 0);
                 gameObject.GetComponent<Animator>().Play("djump");
-                Judgement.instance.JumpSound = true;
+                sound.StartCoroutine("JumpPlay");
             }
             else
             {
@@ -249,9 +252,10 @@ public class PlayerControl : MonoBehaviour
 
         if (Judgement.instance.CameraShot == true)
         {
-
             gameObject.GetComponent<Animator>().Play("cheese");
-
+            //Judgement.instance.CameraShot = false;
+            
+            //Cheese();
         }
 
         if (Input.GetKeyDown(KeyCode.R))

@@ -78,7 +78,7 @@ public class CameraEnd : MonoBehaviour
     IEnumerator CameraActive()
     {
         Judgement.instance.CameraShot = true;
-        yield return new WaitForSecondsRealtime(0.3f);
+        yield return new WaitForEndOfFrame();
         Judgement.instance.CameraShot = false;
     }
 
